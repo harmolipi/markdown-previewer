@@ -1,19 +1,23 @@
+import { useState } from 'react';
+import MarkdownInput from './components/MarkdownInput';
+import MarkdownPreview from './components/MarkdownPreview';
+
 const App = () => {
+  const [markdownText, setMarkdownText] = useState('');
+
+  const handleMarkdownTextChange = (event) => {
+    setMarkdownText(event.target.value);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container mx-auto grid grid-cols-2 gap-4 mt-4 h-screen">
+        <MarkdownInput
+          markdown={markdownText}
+          handleChange={handleMarkdownTextChange}
+        />
+        <MarkdownPreview previewText={markdownText} />
+      </div>
     </div>
   );
 };
