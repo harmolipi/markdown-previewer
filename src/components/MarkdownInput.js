@@ -4,7 +4,7 @@ const MarkdownInput = ({ markdown, handleChange }) => {
       <h2>Editor</h2>
       <textarea
         id="editor"
-        className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none h-5/6"
+        className="font-mono w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none h-5/6"
         placeholder="Enter some markdown here..."
         onChange={handleChange}
         value={markdown}
