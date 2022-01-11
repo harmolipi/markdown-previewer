@@ -30,7 +30,7 @@ And images:
 
   return (
     <div className="App">
-      <div className="container mx-auto grid grid-cols-2 gap-4 pt-4 h-screen">
+      <div className="container mx-auto grid grid-cols-2 gap-4 pt-20 h-screen">
         <MarkdownInput
           markdown={markdownText}
           handleChange={handleMarkdownTextChange}
